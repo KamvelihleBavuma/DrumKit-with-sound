@@ -1,0 +1,78 @@
+/* Drum Kit Styles */
+.drumkit-body {
+  text-align: center;
+  background-color: #283149;
+  margin: 0;
+  font-family: "Arvo", cursive;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.drumkit-header {
+  margin-top: 2rem;
+}
+
+.drumkit-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  color: #DBEDF3;
+  text-shadow: 3px 0 #DA0463;
+}
+
+.drumkit-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drumkit-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.drum {
+  outline: none;
+  border: 8px solid #404B69;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #DA0463;
+  text-shadow: 2px 0 #DBEDF3;
+  border-radius: 15px;
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.drum:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Drum images */
+.drum-w { background-image: url("./images/tom1.png"); }
+.drum-a { background-image: url("./images/tom2.png"); }
+.drum-s { background-image: url("./images/tom3.png"); }
+.drum-d { background-image: url("./images/tom4.png"); }
+.drum-j { background-image: url("./images/snare.png"); }
+.drum-k { background-image: url("./images/crash.png"); }
+.drum-l { background-image: url("./images/kick.png"); }
+
+/* Active states */
+.pressed {
+  box-shadow: 0 3px 6px #DBEDF3;
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+.game-over {
+  background-color: red !important;
+  opacity: 0.8;
+}
